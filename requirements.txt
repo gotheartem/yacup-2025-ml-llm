@@ -1,0 +1,10 @@
+llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu122/
+torch
+transformers
+pandas
+numpy
+faiss-cpu
+jupyter
+ipykernel<7
+ipywidgets
+tqdm
