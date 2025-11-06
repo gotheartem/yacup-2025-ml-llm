@@ -130,11 +130,15 @@ else:
 ### Run guide
 
 #### Docker (recommended)
+
+To run this solution in Docker locally you must have `nvidia-container-toolkit` installed since the solution uses GPU acceleration. See [official installation guide here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
+
 1. Run `./get-model.sh`;
 2. Run `./get-embedder.sh`;
 3. Build an image with `docker build -t yacup-container .`;
-4. Run a container with `docker run yacup-container`.
-**NOTE**: By default entrypoint is `bash test-running.sh`. For submission entrypoint should be `python solution.py`.
+4. Run a container with `docker run --gpus all yacup-container`.
+
+**NOTE**: By default entrypoint is `bash test-running.sh`. For submission entrypoint should be `python solution.py` (see Dockerfile).
 
 #### Without Docker
 1. Run `./get-model.sh`;
